@@ -6,7 +6,7 @@ Pull image from Microsoft
 ```
 docker pull mcr.microsoft.com/dotnet/samples:dotnetapp 
 ```
-Run container
+Run docker container local
 ```
 docker run -it --rm -p 8000:80 --name aspnetcore-sample mcr.microsoft.com/dotnet/samples:aspnetapp
 ```
@@ -14,13 +14,17 @@ Check in browser
 ```
 http://10.197.79.2:8000/
 ```
+![GitHub](DotNet.png)
+
 Look at running docker images
 ```
 docker ps
 ```
+![GitHub](DockerExec.png)
+
 Exec into the running container to make changes
 ```
-	docker exec -it 70b4b386ab66        bash
+	docker exec -it 70b4b386ab66 bash
 
 	cd /app/wwwroot/css
 	cat site.css | sed 's/border-top: 1px solid/border-top: 20px solid/' > a
