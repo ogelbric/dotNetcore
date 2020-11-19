@@ -1,14 +1,21 @@
-.Net core example
-==================
+# .Net core example
 
 Pull image from Microsoft
-	docker pull mcr.microsoft.com/dotnet/samples:dotnetapp
+```
+docker pull mcr.microsoft.com/dotnet/samples:dotnetapp 
+```
 Run container
-	docker run -it --rm -p 8000:80 --name aspnetcore-sample mcr.microsoft.com/dotnet/samples:aspnetapp
+```
+docker run -it --rm -p 8000:80 --name aspnetcore-sample mcr.microsoft.com/dotnet/samples:aspnetapp
+```
 Check in browser
-	http://10.197.79.2:8000/
+```
+http://10.197.79.2:8000/
+```
 Look at running docker images
-	docker ps
+```
+docker ps
+```
 Exec into the running container to make changes
 	docker exec -it 70b4b386ab66        bash
 
