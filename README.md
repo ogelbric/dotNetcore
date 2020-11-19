@@ -14,6 +14,8 @@ Check in browser
 ```
 http://10.197.79.2:8000/
 ```
+** Should look like this **
+
 ![GitHub](DotNet.png)
 
 Look at running docker images
