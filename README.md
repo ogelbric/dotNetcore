@@ -1,4 +1,6 @@
 # .Net core example
+Load up sample .Netcore image from Microsoft and load inot local docker and then load into local Regestry (Harbor). 
+Then create yaml file and load into a Kubernetes cluster
 
 Pull image from Microsoft
 ```
@@ -44,7 +46,7 @@ docker run -it --rm -p 8000:80 --name aspnetcore-sample dotnetbigborder
 Exec into new container and check changes
 ```
 docker ps
-	docker exec -it 70b4b386ab66        bash
+	docker exec -it 70b4b386ab66 bash
 	cat /app/wwwroot/css/site.css
 	ls /app/wwwroot/css/
 ```
@@ -52,6 +54,8 @@ Save original image off
 ```
 docker save mcr.microsoft.com/dotnet/samples > aspnetcore-sample.tar
 ```
+Potentually clean docker images (prune/rm)
+
 Load the image into docker
 ```
 docker load --input aspnetcore-sample.tar
@@ -82,7 +86,7 @@ Tag images and send to registry
 	docker push harbor.lab.local/library/dotnetsamples:aspnetapp
 ```
 
-Create yams file for Kubernetes (dotnet1.yaml)
+Create yaml file for Kubernetes (dotnet1.yaml)
 	change the image: line to local harbor location!
 ```
 apiVersion: v1
@@ -120,7 +124,7 @@ spec:
         - containerPort: 80
 ```
  
-Log onto kubernetes cluster and load .net application	
+Log onto kubernetes cluster and load .net application and test
 ```
 	kubectl apply -f ./dotnet1.yaml
 	kubectl get pods
