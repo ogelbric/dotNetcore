@@ -83,8 +83,8 @@ Tag images and send to registry
 ```
 	Example for local registry
 ```
-	docker tag mcr.microsoft.com/dotnet/samples:latest harbor.lab.local/librar/dotnetsamples:latest
-	docker tag mcr.microsoft.com/dotnet/samples:dotnetapp harbor.lab.local/librar/dotnetsamples:dotnetapp
+	docker tag mcr.microsoft.com/dotnet/samples:latest harbor.lab.local/library/dotnetsamples:latest
+	docker tag mcr.microsoft.com/dotnet/samples:dotnetapp harbor.lab.local/library/dotnetsamples:dotnetapp
 	docker tag mcr.microsoft.com/dotnet/samples:aspnetapp harbor.lab.local/library/dotnetsamples:aspnetapp
 	docker login harbor2.lab.local -u administrator@vsphere.local
 	docker push harbor.lab.local/library/dotnetsamples:latest
