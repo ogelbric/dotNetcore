@@ -1,6 +1,6 @@
 # .Net core example
-Load up sample .Netcore image from Microsoft and load inot local docker and then load into local Regestry (Harbor). 
-Then create yaml file and load into a Kubernetes cluster
+Sample .Netcore image from Microsoft and instal into local docker and then move into local Regestry (Harbor). 
+Create yaml file and apply into Kubernetes cluster
 
 Pull image from Microsoft
 ```
